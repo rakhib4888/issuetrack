@@ -13,7 +13,7 @@ export default function BasicTextFields() {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = () => navigate("/issuetrack");
+  const onSubmit = (data) => navigate("/issuetrack");
 
   const [btn, setBtn] = useState(true);
   const handleChange = (e) => {
@@ -89,11 +89,11 @@ export default function BasicTextFields() {
                 {...register("desc", {
                   required: {
                     value: true,
-                    message: "Company name is required",
+                    message: "description name is required",
                   },
                   minLength: {
                     value: 3,
-                    message: "Please enter your company name",
+                    message: "Please enter your description",
                   },
                   maxLength: {
                     value: 500,
@@ -179,7 +179,7 @@ export default function BasicTextFields() {
                   },
                   minLength: {
                     value: 3,
-                    message: "Please enter your company name",
+                    message: "Please enter your story points",
                   },
                   maxLength: {
                     value: 20,
@@ -205,7 +205,7 @@ export default function BasicTextFields() {
             <button
               type="submit"
               class="btn btn-primary"
-
+              onClick={() => navigate("/")}
             >
               Save
             </button>
