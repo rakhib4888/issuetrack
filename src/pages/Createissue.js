@@ -13,7 +13,7 @@ export default function BasicTextFields() {
     watch,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => alert(JSON.stringify(data));
+  const onSubmit = () => navigate("/issuetrack");
 
   const [btn, setBtn] = useState(true);
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ export default function BasicTextFields() {
       setBtn(false);
     }
   };
-  const handleReset = (e) => {};
+  const handleReset = (e) => { };
   return (
     <>
       <Searchapp />
@@ -205,7 +205,7 @@ export default function BasicTextFields() {
             <button
               type="submit"
               class="btn btn-primary"
-              onClick={() => navigate("/")}
+
             >
               Save
             </button>
